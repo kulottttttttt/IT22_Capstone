@@ -1,0 +1,82 @@
+=== ZONE DTOs ===
+
+FILE: src\SmartParking.Application\Common\DTOs\Zone\CreateZoneDto.cs
+---
+namespace SmartParking.Application.Common.DTOs.Zone;
+
+public class CreateZoneDto
+{
+    public Guid ParkingAreaId { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public string MapColorHex { get; set; } = string.Empty;
+    public int SortOrder { get; set; }
+}
+---
+
+FILE: src\SmartParking.Application\Common\DTOs\Zone\UpdateZoneDto.cs
+---
+namespace SmartParking.Application.Common.DTOs.Zone;
+
+public class UpdateZoneDto
+{
+    public Guid ParkingAreaId { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public string MapColorHex { get; set; } = string.Empty;
+    public int SortOrder { get; set; }
+}
+---
+
+=== PARKING SLOT DTOs ===
+
+FILE: src\SmartParking.Application\Common\DTOs\ParkingSlot\ParkingSlotDto.cs
+---
+namespace SmartParking.Application.Common.DTOs.ParkingSlot;
+
+public class ParkingSlotDto
+{
+    public Guid Id { get; set; }
+    public Guid ZoneId { get; set; }
+    public string SlotNumber { get; set; } = string.Empty;
+    public string VehicleType { get; set; } = string.Empty;
+    public string CurrentStatus { get; set; } = string.Empty;
+    public DateTime LastStatusChange { get; set; }
+    public decimal XCoordinate { get; set; }
+    public decimal YCoordinate { get; set; }
+    public bool IsSensorEnabled { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
+}
+---
+
+FILE: src\SmartParking.Application\Common\DTOs\ParkingSlot\CreateParkingSlotDto.cs
+---
+namespace SmartParking.Application.Common.DTOs.ParkingSlot;
+
+public class CreateParkingSlotDto
+{
+    public Guid ZoneId { get; set; }
+    public string SlotNumber { get; set; } = string.Empty;
+    public string VehicleType { get; set; } = string.Empty;
+    public decimal XCoordinate { get; set; }
+    public decimal YCoordinate { get; set; }
+    public bool IsSensorEnabled { get; set; }
+}
+---
+
+FILE: src\SmartParking.Application\Common\DTOs\ParkingSlot\UpdateParkingSlotDto.cs
+---
+namespace SmartParking.Application.Common.DTOs.ParkingSlot;
+
+public class UpdateParkingSlotDto
+{
+    public Guid ZoneId { get; set; }
+    public string SlotNumber { get; set; } = string.Empty;
+    public string VehicleType { get; set; } = string.Empty;
+    public decimal XCoordinate { get; set; }
+    public decimal YCoordinate { get; set; }
+    public bool IsSensorEnabled { get; set; }
+}
+---
+

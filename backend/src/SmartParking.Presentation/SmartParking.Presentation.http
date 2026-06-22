@@ -1,0 +1,6 @@
+@SmartParking.Presentation_HostAddress = http://localhost:5257
+
+GET {{SmartParking.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
